@@ -1,22 +1,19 @@
+// value types (primitives) - number, string, boolean, symbol, undefined, null
+// reference types - object, function, array
 
-function Circle(radius) {
-    this.radius = radius;
-    this.draw = function () {
-        console.log('draw');
-    }
+// how primitives and objects behave differently? primitives are copied by their value and objects are copied by their reference
+
+let x = { value: 10 };
+let y = x;
+
+x.value = 20;
+
+let obj = { value: 10 };
+
+function increase(obj) {
+    obj.value++;
+
 }
 
-// const Circle1 = new Function('radius', `
-//     this.radius = radius;
-//     this.draw = function() {
-//         console.log('draw');
-//         }
-//         `);
-
-// const circle = new Circle(1);
-
-Circle.call({}, 1);
-Circle.apply({}, [1, 2, 3]);
-
-const another = new Circle(1);
-
+increase(obj);
+console.log(obj);
