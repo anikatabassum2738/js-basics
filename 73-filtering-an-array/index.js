@@ -1,14 +1,14 @@
 const numbers = [1, -1, 2, 3];
 
-const allPositive = numbers.every(function(value) {
+const filtered = numbers.filter(function (value) {
     return value >= 0;
 });
+console.log(filtered);
 
-console.log(allPositive);
+
+const filtered1 = numbers.filter(value => value >= 0);
+console.log(filtered1);
 
 
-const atLeastOnePositive = numbers.some(function(value) {
-    return value >= 0;
-});
-
-console.log(atLeastOnePositive);
+const filtered2 = numbers.filter(n => n >= 0);
+console.log(filtered2);
